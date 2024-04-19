@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+        .logobar{
+    height: 150px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    position: sticky;
+
+}
+
+.logobar img{
+    margin: 0 90px;
+
+}
+
+.serbutt {
+    margin: 0 0 0 286px;
+}
+.search{
+    width: 500px;
+    height: 50px;
+    border-bottom-left-radius: 26px;
+    border-top-left-radius: 26px;
+    border-style: none;
+    background-color: #003C25;
+    color: rgb(255, 235, 235);
+}
+
+.searchbtn{
+    height: 50px;
+    width: 70px;
+    border-top-right-radius: 26px;
+    border-bottom-right-radius: 26px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-style: none;
+    margin-left: -2px;
+    background-color: rgb(230, 210, 210);
+
+}
+
+.falogo {
+    margin: 0 -56px;
+}
+
+.nbar{
+    background-color: #003C25;
+    padding: 0 90px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.nbar a {
+    margin: 0 189px 0 0;
+  color: white;
+  font-size: 26px;
+  text-decoration: none;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(menu5.jpg);
+        }
+
+        header {
+            background-color: #003C25;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            margin-top: 10px;
+        }
+
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 2em;
+        }
+
+        .menu-item {
+            border: 1px solid #ccc;
+            padding: 1em;
+            text-align: center;
+            max-width: 229px;
+            margin: 1em;
+            border: 2px solid #2c2c2c; 
+            backdrop-filter: blur(5px);
+            box-shadow: #000033;
+            border-radius: 20px;
+            padding:40px 20px
+        }
+
+        button {
+            background-color: #003C25;
+            color: #fff;
+            padding: 0.5em 1em;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cart {
+            margin: 2em;
+            text-align: center;
+        }
+
+        #total-price {
+            font-size: 1.2em;
+        }
+        .site-footer
+{
+  background-color:#003C25;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+  padding: 0 155px;
+}
+.site-footer hr
+{
+  border-top-color:#fff;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#fff;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+
+.foolerlogo {
+  display: inline-flex;
+}
+
+.fotr {
+    display: flex;
+}
+    </style>
+</head>
+<body>
+    <div class="logobar">
+        <img src="logo.png" alt="logo" width="300px" />
+
+        <input type="search" name="search" class="search serbutt" placeholder="       search" />
+        <input type="button" class="btn searchbtn serbutt" />
+        <i class="fa-solid fa-2x fa-magnifying-glass btn falogo" style="color: black;"></i>
+    </div>
+    <div class="navbar active nbar"> 
+        <a href="Home page.html">Home</a>
+        <a href="Login.html">Login</a>
+        <a href="Registration.html">Registration</a>
+        <a href="Blog.html">Blog</a>
+        <a href="service.html">Service</a>
+    </div>
+    <header>
+        <h1>Cafe Menu</h1>
+    </header>
+    <div class="menu">
+        <div class="menu-item">
+            <h2>CAKES</h2>
+            <p>Indulge in a world of fun with our range of exquisite cakes.</p>
+            <p><strong>Price: $3.50</strong></p>
+            <button onclick="addToCart('CAKES', 3.50)">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <h2>SANDWICHES</h2>
+            <p>Enjoy the perfect blend of flavors and textures with our 'sandwiches'.</p>
+            <p><strong>Price: $5.17</strong></p>
+            <button onclick="addToCart('SANDWICHES', 5.17)">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <h2>BULK COFFEE</h2>
+            <p>Experience the essence of rich aroma and strong taste with our 'bulk coffee'.</p>
+            <p><strong>Price: $2.70</strong></p>
+            <button onclick="addToCart('BULK COFFEE', 2.70)">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <h2>FRESH JUICE</h2>
+            <p>Discover the refreshing vitality of nature's bounty with our 'Fresh Juice'</p>
+            <p><strong>Price: $4.35</strong></p>
+            <button onclick="addToCart('FRESH JUICE', 4.35)">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <h2>PIZZA SLICES</h2>
+            <p>Indulge in a slice of pure happiness with our 'Pizza Slice'.</p>
+            <p><strong>Price: $6.00</strong></p>
+            <button onclick="addToCart('PIZZA SLICES', 6.00)">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <h2>TEA</h2>
+            <p>Sip peace in a cup with our selection of TEA's.</p>
+            <p><strong>Price: $2.50</strong></p>
+            <button onclick="addToCart('TEA', 2.50)">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <h2>SALADS</h2>
+            <p>Enhance your plate with our vibrant 'salads'.</p>
+            <p><strong>Price: $7.50</strong></p>
+            <button onclick="addToCart('SALADS', 7.50)">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <h2>SMOOTHIES</h2>
+            <p>Embark on a delicious journey with our 'Smoothies'..</p>
+            <p><strong>Price: $4.99</strong></p>
+            <button onclick="addToCart('SMOOTHIES', 4.99)">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <h2>BREAKFAST BURRITOS</h2>
+            <p>Start your day with flavor and energy courtesy of our 'Breakfast Burritos'.</p>
+            <p><strong>Price: $5.99</strong></p>
+            <button onclick="addToCart('BREAKFAST BURRITOS', 5.99)">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <h2>LEMONADE</h2>
+            <p>Sip the sunshine with our 'Lemonade'.</p>
+            <p><strong>Price: $4.9</strong></p>
+            <button onclick="addToCart('LEMONADE', 4.9)">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <h2>WRAPS</h2>
+            <p>Wrap your senses in layers of flavor and freshness with our mouth watering 'WRAPS'.</p>
+            <p><strong>Price: $6.07</strong></p>
+            <button onclick="addToCart('WRAPS', 6.07)">Add to Cart</button>
+        </div>
+        <div class="menu-item">
+            <h2>CROISSANTS</h2>
+            <p>Indulge in the buttery, flaky perfection of our 'CROISSANTS'.</p>
+            <p><strong>Price: $2.25</strong></p>
+            <button onclick="addToCart('CROISSANTS', 2.25)">Add to Cart</button>
+        </div>
+    </div>
+    <div class="cart">
+        <h2>Cart</h2>
+        <ul id="cart-items">
+        </ul>
+        <p id="total-price"><strong>Total: $0.00</strong></p>
+        <button onclick="checkout()">Checkout</button>
+    </div>
+    <script>
+        let cart = [];
+        let totalPrice = 0;
+
+        function addToCart(itemName, itemPrice) {
+            cart.push({ name: itemName, price: itemPrice });
+            totalPrice += itemPrice;
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartItems = document.getElementById('cart-items');
+            const totalElement = document.getElementById('total-price');
+
+            cartItems.innerHTML = '';
+
+            cart.forEach(item => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${item.name} - $${item.price}`;
+                cartItems.appendChild(listItem);
+            });
+
+            totalElement.innerHTML = `<strong>Total: $${totalPrice.toFixed(2)}</strong>`;
+        }
+
+        function checkout() {
+            if (cart.length === 0) {
+                alert('Your cart is empty. Add items before checking out.');
+            } else {
+                alert(`Total Price: $${totalPrice.toFixed(2)}\nThank you for your order!`);
+                cart = [];
+                totalPrice = 0;
+                updateCart();
+            }
+        }
+    </script>
+    <footer class="site-footer">
+        <div class="container fotr">
+              <div class="col-xs-6 col-md-3">
+                <h6>Categories</h6>
+                <ul class="footer-links">
+                  <li><a href="#">C</a></li>
+                  <li><a href="#">UI Design</a></li>
+                  <li><a href="#">PHP</a></li>
+                  <li><a href="#">Java</a></li>
+                  <li><a href="#">Android</a></li>
+                  <li><a href="#">Templates</a></li>
+                </ul>
+              </div>
+    
+              <div class="col-xs-6 col-md-3">
+                <h6>Quick Links</h6>
+                <ul class="footer-links">
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">Contribute</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                </ul>
+              </div>
+            </div>
+            <hr>
+          </div>
+    </footer>
+</body>
+</html>

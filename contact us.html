@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        /* CSS styles for the Contact Us page */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(vintage2.jpg);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 120px;
+            backdrop-filter: blur(5px);
+        }
+
+        .contact-form {
+            border: 2px solid #444242;
+            padding: 30px;
+            border-radius: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 2px solid #ccc;
+            border-radius: 20px;
+        }
+
+        button {
+            background-color: #e53a20;
+            color: #fff;
+            padding: 10px 20px;
+            border: 1px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #Feedback {
+            color: #4b5adf;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="contact-form">
+            <form id="contactForm">
+                <h1>Contact Us</h1>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" placeholder="Enter your name" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" placeholder="Enter your email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Feedback:</label>
+                    <textarea id="Feedback" name="Feedback" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+            <div id="confirmationMessage"></div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript code for form submission and confirmation
+        const contactForm = document.getElementById('contactForm');
+        const confirmationMessage = document.getElementById('confirmationMessage');
+
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // You can add form validation logic here if needed
+
+            // Simulate a successful submission for this example
+            confirmationMessage.innerHTML = '<p>Thank you for your feedback. We will get back to you soon!</p>';
+            contactForm.reset();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <title>Login</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+        }
+        .logobar{
+    height: 150px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    position: sticky;
+
+}
+
+.logobar img{
+    margin: 0 90px;
+
+}
+
+.serbutt {
+    margin: 0 0 0 286px;
+}
+.search{
+    width: 500px;
+    height: 50px;
+    border-bottom-left-radius: 26px;
+    border-top-left-radius: 26px;
+    border-style: none;
+    background-color: #003C25;
+    color: rgb(255, 235, 235);
+}
+
+.searchbtn{
+    height: 50px;
+    width: 70px;
+    border-top-right-radius: 26px;
+    border-bottom-right-radius: 26px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-style: none;
+    margin-left: -2px;
+    background-color: rgb(230, 210, 210);
+
+}
+
+.falogo {
+    margin: 0 -68px;
+}
+
+.nbar{
+    background-color: #003C25;
+    padding: 0 90px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.nbar a {
+    margin: 0 189px 0 0;
+  color: white;
+  font-size: 26px;
+  text-decoration: none;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+
+        .login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 775px;
+    background:url(Rbg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.bkground{
+    width: 300px;
+    background-color:transparent;
+    border: 2px solid #2c2c2c; 
+    backdrop-filter: blur(5px);
+    box-shadow: #000033;
+    border-radius: 20px;
+    padding:40px 20px
+}
+.bkground h1{
+    font-size: 36px;
+    text-align: center;
+}
+.bkground .input-box{
+    position: relative;
+    width: 100%;
+    height: 45px;
+    margin: 20px 0px;
+}
+.input-box input{
+    width: 94%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid #2c2c2c;
+    border-radius: 40px;
+    font-size:16px;
+    padding-left:20px;
+}
+.input-box i{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+.remember-forget{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin: -10px 0px 10px;
+}
+.remember-forget label input{
+    accent-color: #424242;
+    margin-right: 5px;
+}
+.remember-forget a{
+    text-decoration: none;
+    color:#424242;
+}
+.remember-forget a:hover{
+    text-decoration: underline;
+}
+.btn{
+    width:100%;
+    height:45px;
+    background:#003C25;
+    border: 2px;
+    outline: none;
+    border-radius: 20px;
+    box-shadow: #242323;
+    cursor: pointer;
+    font-size: 16px;
+    color:#ffffff;
+    font-weight:600px
+}
+.regis-link{
+    font-size: 14px;
+    text-align: center;
+    margin-top:20px;
+    
+}
+.regis-link p a{
+    color:#003C25;
+    text-decoration: none;
+    font-weight:600px;
+}
+.regis-link p a:hover{
+    text-decoration: underline;
+}
+.site-footer
+{
+  background-color:#003C25;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+.site-footer hr
+{
+  border-top-color:#fff;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#fff;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+
+.foolerlogo {
+  display: inline-flex;
+}
+
+.fotr {
+    display: flex;
+}
+    </style>
+</head>
+<body>
+    <div class="logobar">
+        <img src="logo.png" alt="logo" width="300px" />
+
+        <input type="search" name="search" class="search serbutt" placeholder="       search" />
+        <input type="button" class="btn searchbtn serbutt" />
+        <i class="fa-solid fa-2x fa-magnifying-glass btn falogo" style="color: black;"></i>
+    </div>
+    <div class="navbar active nbar"> 
+        <a href="Home page.html">Home</a>
+        <a href="Login.html">Login</a>
+        <a href="Registration.html">Registration</a>
+        <a href="Blog.html">Blog</a>
+        <a href="service.html">Service</a>
+    </div>
+    <content class="login">
+        <div class="bkground">
+            <form action="">
+                <h1>Login</h1>
+                <div class="input-box">
+                    <input type="text" placeholder="Username" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Password" required>
+                    <i class='bx bxs-lock-alt' ></i>
+                </div>
+                <div class="remember-forget">
+                    <label><input type="checkbox">Remember me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <div>
+                <button type="submit" class="btn">Login</button>
+                </div>
+                <div class="regis-link">
+                    <p>Don't have an account? <a href="Registration.html"><b>Register</b></a></p>
+                </div>
+            </form>
+        </div>
+    </content>
+    <footer class="site-footer">
+        <div class="container fotr">
+              <div class="col-xs-6 col-md-3">
+                <h6>Categories</h6>
+                <ul class="footer-links">
+                  <li><a href="#">C</a></li>
+                  <li><a href="#">UI Design</a></li>
+                  <li><a href="#">PHP</a></li>
+                  <li><a href="#">Java</a></li>
+                  <li><a href="#">Android</a></li>
+                  <li><a href="#">Templates</a></li>
+                </ul>
+              </div>
+    
+              <div class="col-xs-6 col-md-3">
+                <h6>Quick Links</h6>
+                <ul class="footer-links">
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">Contribute</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                </ul>
+              </div>
+            </div>
+            <hr>
+          </div>
+    </footer>
+</body>
+</html>

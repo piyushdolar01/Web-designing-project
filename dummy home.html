@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Event Registration Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .blink {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% { color: red; }
+  50% { color: transparent; }
+  100% { color: red; }
+}
+
+input:focus {
+  background-color: yellow;
+}
+    </style>
+    <script>
+        $(document).ready(function() {
+  $("#agree").change(function() {
+    if ($(this).is(":checked")) {
+      $("#register-button").prop("disabled", false);
+    } else {
+      $("#register-button").prop("disabled", true);
+    }
+  });
+
+  $("#name").addClass("blink");
+});
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center mb-5">Event Registration Form</h1>
+      <form id="registration-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" required>
+        </div>
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="number" class="form-control" id="age" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="contact">Contact No.</label>
+          <input type="tel" class="form-control" id="contact" required>
+        </div>
+        <div class="form-group">
+          <label for="event">Select Event</label>
+          <select class="form-control" id="event" required>
+            <option value="">Select an event</option>
+            <option value="event1">Event 1</option>
+            <option value="event2">Event 2</option>
+            <option value="event3">Event 3</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="time">Select Event Time</label>
+          <select class="form-control" id="time" required>
+            <option value="">Select a time</option>
+            <option value="10am">10:00 AM</option>
+            <option value="2pm">2:00 PM</option>
+            <option value="7pm">7:00 PM</option>
+          </select>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="agree" required>
+          <label class="form-check-label" for="agree">I agree to the terms and conditions</label>
+        </div>
+        <button type="submit" class="btn btn-primary" id="register-button" disabled>Register</button>
+      </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
